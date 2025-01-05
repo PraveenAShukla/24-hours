@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Risk Assessment</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero bg-primary text-white py-5">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold">Credit Risk Assessment</h1>
+            <p class="lead">Evaluate your credit risk using financial and alternative data insights.</p>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="form-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="card shadow border-0">
+                        <div class="card-body p-4">
+                            <h2 class="card-title text-center text-dark fw-bold mb-4">Enter Your Details</h2>
+                            <form action="/predict" method="post">
+                                <!-- Income -->
+                                <div class="mb-3">
+                                    <label for="Income" class="form-label">Income ($)</label>
+                                    <input type="number" class="form-control" name="Income" placeholder="Enter your income" required>
+                                </div>
+                                <!-- Debt-to-Income Ratio -->
+                                <div class="mb-3">
+                                    <label for="DebtToIncomeRatio" class="form-label">Debt-to-Income Ratio</label>
+                                    <input type="number" class="form-control" name="DebtToIncomeRatio" step="0.01" placeholder="e.g., 0.3" required>
+                                </div>
+                                <!-- Utility Timeliness -->
+                                <div class="mb-3">
+                                    <label for="UtilityTimeliness" class="form-label">Utility Timeliness</label>
+                                    <select class="form-select" name="UtilityTimeliness" required>
+                                        <option value="1">On Time</option>
+                                        <option value="0">Late</option>
+                                    </select>
+                                </div>
+                                <!-- Social Sentiment -->
+                                <div class="mb-3">
+                                    <label for="SocialSentiment" class="form-label">Social Sentiment Score</label>
+                                    <input type="number" class="form-control" name="SocialSentiment" step="0.01" placeholder="0-1" required>
+                                </div>
+                                <!-- Geolocation Score -->
+                                <div class="mb-3">
+                                    <label for="GeolocationScore" class="form-label">Geolocation Score</label>
+                                    <input type="number" class="form-control" name="GeolocationScore" step="0.01" placeholder="0-1" required>
+                                </div>
+                                <!-- Submit Button -->
+                                <button type="submit" class="btn btn-primary w-100 py-2">Predict</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center py-3">
+        <p class="mb-0 text-muted">© 2025 Credit Risk Assessment. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

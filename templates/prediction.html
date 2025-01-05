@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Risk Result</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body class="bg-light">
+    <!-- Result Section -->
+    <div class="container vh-100 d-flex justify-content-center align-items-center">
+        <div class="card shadow-lg border-0 text-center" style="max-width: 500px; border-radius: 15px;">
+            <div class="card-body p-5">
+                <h1 class="text-primary fw-bold mb-4">Credit Risk Score</h1>
+                <p class="mb-4 fs-4 text-secondary">Your risk score is: <strong class="text-danger fs-3">{{ score }}%</strong></p>
+                <a href="/" class="btn btn-primary btn-lg w-100">Go Back</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

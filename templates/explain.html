@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explain Credit Risk</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Explain Credit Risk</h1>
+        <table>
+            <tr>
+                <th>Feature</th>
+                <th>Contribution</th>
+            </tr>
+            {% for feature, contribution in explanations.items() %}
+            <tr>
+                <td>{{ feature }}</td>
+                <td>{{ contribution }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="/">Go Back</a>
+    </div>
+</body>
+</html>

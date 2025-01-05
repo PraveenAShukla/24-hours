@@ -2,6 +2,6 @@ services:
   - type: web
     name: credit-risk-app
     env: python
-    buildCommand: apt-get update && apt-get install -y build-essential libatlas-base-dev && pip install --upgrade pip && pip install -r requirements.txt
+    buildCommand: pip install --upgrade pip && pip install numpy==1.23.5 --only-binary=:all: && pip install -r requirements.txt
     startCommand: python app.py
     plan: free
